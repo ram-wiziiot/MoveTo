@@ -1,0 +1,55 @@
+// MoveTo.idl : IDL source for MoveTo.dll
+//
+// This file is processed by MIDL to produce MoveTo.tlb, MoveTo.h and
+// MoveTo_i.c.  MoveTo.h / MoveTo_i.c are build outputs and are not in
+// source control -- see .gitignore.
+//
+// The GUIDs below were generated with [guid]::NewGuid() (RFC 4122
+// version 4, random) and are distinct from every GUID in DirClean
+// (BA06A5A0 / BA06A5AD / BA06A5AE).
+//
+//   LIBID_MOVETOLib     1BD0A422-660F-4DC6-8A62-5CFB4F62A5E4
+//   IID_IMoveToShlExt   FE06F0D2-05A3-4F27-8BFC-EE9DD4AD2D61
+//   CLSID_MoveToShlExt  DE113EFB-7938-4BCA-919F-787F0729C2A3
+//
+// The dispinterface is vestigial: nothing in the shell ever calls it.
+// It is kept only so the object keeps DirClean's shape (IDispatchImpl +
+// a registered type library), which is what makes the .rgs, the
+// ATL registrar and DllRegisterServer identical between the two
+// projects.  If it is ever dropped, drop the 'TypeLib' value from
+// MoveToShlExt.rgs and pass FALSE to _Module.RegisterServer in the
+// same commit.
+//
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(FE06F0D2-05A3-4F27-8BFC-EE9DD4AD2D61),
+		dual,
+		helpstring("IMoveToShlExt Interface"),
+		pointer_default(unique)
+	]
+	interface IMoveToShlExt : IDispatch
+	{
+	};
+
+[
+	uuid(1BD0A422-660F-4DC6-8A62-5CFB4F62A5E4),
+	version(1.0),
+	helpstring("MoveTo 1.0 Type Library")
+]
+library MOVETOLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(DE113EFB-7938-4BCA-919F-787F0729C2A3),
+		helpstring("MoveToShlExt Class")
+	]
+	coclass MoveToShlExt
+	{
+		[default] interface IMoveToShlExt;
+	};
+};

@@ -1,0 +1,196 @@
+// MoveTo.rc
+//
+// HAND-MAINTAINED -- see the banner in resource.h before editing.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE
+BEGIN
+    "1 TYPELIB ""MoveTo.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Adds a 'Move to' submenu of recent and pinned folders to the Explorer context menu.\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "MoveTo Shell Extension\0"
+            VALUE "FileVersion", "1.0.0.0\0"
+            VALUE "InternalName", "MoveTo\0"
+            VALUE "LegalCopyright", "Shell-extension plumbing derived from DirClean by Michael Dunn. Freely redistributable with that notice.\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OLESelfRegister", "\0"
+            VALUE "OriginalFilename", "MoveTo.DLL\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "MoveTo\0"
+            VALUE "ProductVersion", "1.0.0.0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_MOVETOSHLEXT        REGISTRY DISCARDABLE    "MoveToShlExt.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+// DIALOGEX + "Segoe UI" 9.  Neither "MS Shell Dlg" nor "MS Shell Dlg 2"
+// resolves to the shell font on Windows 11 (they map to Microsoft Sans
+// Serif and Tahoma via HKLM FontSubstitutes), so the face is named
+// outright -- and as a TrueType face it scales cleanly under Explorer's
+// per-monitor DPI context.
+//
+
+IDD_MANAGE_DESTINATIONS DIALOGEX 0, 0, 360, 232
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "MoveTo - manage destinations"
+FONT 9, "Segoe UI", 400, 0, 0x1
+BEGIN
+    LTEXT           "&Folders offered on the ""Move to"" menu. Pinned folders stay at the top and are never dropped automatically.",
+                    IDC_DEST_HINT,7,7,346,18
+    CONTROL         "",IDC_DEST_LIST,"SysListView32",LVS_REPORT |
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER |
+                    WS_GROUP | WS_TABSTOP,7,29,282,160
+    PUSHBUTTON      "&Pin",IDC_DEST_PIN,295,29,58,14,WS_GROUP
+    PUSHBUTTON      "&Unpin",IDC_DEST_UNPIN,295,47,58,14
+    PUSHBUTTON      "Move &up",IDC_MOVE_UP,295,69,58,14
+    PUSHBUTTON      "Move &down",IDC_MOVE_DOWN,295,87,58,14
+    PUSHBUTTON      "Re&name...",IDC_RENAME,295,109,58,14
+    PUSHBUTTON      "&Forget",IDC_FORGET,295,131,58,14
+    LTEXT           "&Remember this many recent folders:",IDC_STATIC,7,196,130,8
+    EDITTEXT        IDC_CAPACITY,140,194,32,14,ES_AUTOHSCROLL | ES_NUMBER | WS_GROUP
+    DEFPUSHBUTTON   "Close",IDOK,303,211,50,14,WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE
+BEGIN
+    IDD_MANAGE_DESTINATIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 353
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 225
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_PROJNAME            "MoveTo"
+END
+
+// DO NOT MERGE THIS BLOCK INTO THE ONE ABOVE, RENAME IT, OR RENUMBER IT.
+//
+// MFC builds CWinApp::m_pszAppName from AFX_IDS_APP_TITLE, and
+// m_pszProfileName is copied from it.  MoveTo.cpp calls
+// SetRegistryKey(_T("Wiziiot")), and MoveDest.cpp composes the store's
+// key path from m_pszRegistryKey and m_pszProfileName:
+//
+//      HKCU\Software\Wiziiot\MoveTo\Destinations
+//
+// Without this string MFC falls back to the module's base name, so it
+// works only by luck as long as the DLL is called MoveTo.dll.  Rename or
+// rebrand the binary and every stored destination silently relocates --
+// the user's entire history disappears with no error.
+STRINGTABLE DISCARDABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "MoveTo"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "MoveTo.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED

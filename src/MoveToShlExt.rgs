@@ -1,0 +1,35 @@
+HKCR
+{
+	NoRemove AllFilesystemObjects
+	{
+		NoRemove shellex
+		{
+			NoRemove ContextMenuHandlers
+			{
+				ForceRemove MoveToShlExt = s '{DE113EFB-7938-4BCA-919F-787F0729C2A3}'
+			}
+		}
+	}
+	MoveTo.MoveToShlExt.1 = s 'MoveToShlExt Class'
+	{
+		CLSID = s '{DE113EFB-7938-4BCA-919F-787F0729C2A3}'
+	}
+	MoveTo.MoveToShlExt = s 'MoveToShlExt Class'
+	{
+		CLSID = s '{DE113EFB-7938-4BCA-919F-787F0729C2A3}'
+		CurVer = s 'MoveTo.MoveToShlExt.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {DE113EFB-7938-4BCA-919F-787F0729C2A3} = s 'MoveToShlExt Class'
+		{
+			ProgID = s 'MoveTo.MoveToShlExt.1'
+			VersionIndependentProgID = s 'MoveTo.MoveToShlExt'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{1BD0A422-660F-4DC6-8A62-5CFB4F62A5E4}'
+		}
+	}
+}

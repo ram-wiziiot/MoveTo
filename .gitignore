@@ -1,0 +1,14 @@
+# Build output
+bin/
+obj/
+*.user
+*.aps
+*.suo
+.vs/
+
+# MIDL output — regenerated from src/MoveTo.idl on every build
+src/MoveTo.h
+src/MoveTo_i.c
+src/MoveTo_p.c
+src/dlldata.c
+src/MoveTo.tlb

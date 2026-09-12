@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MoveTo", "src\MoveTo.vcxproj", "{0938446F-3C21-49B5-9A0E-7C1F2E5D8B44}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MoveToTests", "tests\MoveToTests.vcxproj", "{C4A71F83-6D52-4E19-B7A8-2F9E0C5D1A66}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0938446F-3C21-49B5-9A0E-7C1F2E5D8B44}.Debug|x64.ActiveCfg = Debug|x64
+		{0938446F-3C21-49B5-9A0E-7C1F2E5D8B44}.Debug|x64.Build.0 = Debug|x64
+		{0938446F-3C21-49B5-9A0E-7C1F2E5D8B44}.Release|x64.ActiveCfg = Release|x64
+		{0938446F-3C21-49B5-9A0E-7C1F2E5D8B44}.Release|x64.Build.0 = Release|x64
+		{C4A71F83-6D52-4E19-B7A8-2F9E0C5D1A66}.Debug|x64.ActiveCfg = Debug|x64
+		{C4A71F83-6D52-4E19-B7A8-2F9E0C5D1A66}.Debug|x64.Build.0 = Debug|x64
+		{C4A71F83-6D52-4E19-B7A8-2F9E0C5D1A66}.Release|x64.ActiveCfg = Release|x64
+		{C4A71F83-6D52-4E19-B7A8-2F9E0C5D1A66}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

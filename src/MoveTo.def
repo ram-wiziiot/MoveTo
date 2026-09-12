@@ -1,0 +1,14 @@
+; MoveTo.def : Declares the module parameters.
+;
+; DllInstall is the addition over DirClean's .def.  regsvr32 /i:user
+; reaches it, and it is the only supported way to register this DLL
+; under HKCU without administrator rights.
+
+LIBRARY      "MoveTo.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE
+	DllInstall		PRIVATE

@@ -1,0 +1,20 @@
+* text=auto
+
+*.cpp   text
+*.h     text
+*.c     text
+*.idl   text
+*.def   text
+*.rgs   text
+*.md    text
+*.cmd   text eol=crlf
+
+# The resource script and project files are tool-owned; keep CRLF so the
+# VS tools do not rewrite the whole file on first save.
+*.rc       text eol=crlf
+*.vcxproj  text eol=crlf
+*.sln      text eol=crlf
+
+*.bmp   binary
+*.zip   binary
+*.dll   binary
